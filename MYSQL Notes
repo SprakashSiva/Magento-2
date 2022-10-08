@@ -1,0 +1,5 @@
+Import database through command line
+mysql -u username -p database_name < file.sql
+
+Import local sql into remote mysql
+mysql -h host -u user_name -p password database_name < file.sql
