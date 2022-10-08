@@ -1,0 +1,26 @@
+Install third-party Extensions
+  composer require sendinblue/module-sendinblue
+  composer require mailchimp/mc-magento2:103.4.44
+
+Upgrade magento 2.1 to 2.4 after Isssues and Answers
+https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/implementation/perform-upgrade.html
+https://www.mgt-commerce.com/tutorial/how-to-upgrade-magento-2-3-to-2-4/
+
+1. Product detail page product images are not showed
+  i. Enable Magento developer mode
+  ii. Go to magento admin
+    Store -> Config -> Developer -> Image processing settings -> image adapter change PHP gd2 to ImageMagick
+  iii. Run below magento image resize command 
+    bin/magento catalog:images:resize
+
+Export product CSV file
+1.Go to Admin -> System -> Data transfer -> Export -> select and set export file type has CSV and export it
+2.Magento cron is not running then run the below command while export
+  bin/magento queue:consumers:start exportProcessor
+
+Configure Tax class
+1. Go to Admin -> Stores -> Taxes  -> Tax zone and Rates -> Add tax rate
+2. Go to Admin -> Stores -> Taxes  -> Tax rules -> Add new tax
+
+
+
