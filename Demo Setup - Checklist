@@ -1,0 +1,7 @@
+#	Process
+1	Disable the emails and SMS going to the store admin and actual customers.
+2	Change the 3rd-party credentials like payment gateway, shipment services, ERP, etc to test mode with test account credentials.
+3	Do not enable CRON. In case you are enabling CRON, please ensure all the custom CRONs (defined in crontab and inside Magento) are disabled.
+4	Enable Display Demo Store Notice.
+5	Create a separate branch in GIT for the demo.
+6	Check for any live website URL or any 3rd-party API URLs which are connected to the live website that is hardcoded in the demo files and database. If found any replace it will equivalent demo URL/APIs.
