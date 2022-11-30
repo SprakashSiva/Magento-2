@@ -1,0 +1,34 @@
+1.Set up the elgiultra to demo website (check the website)
+2.Procedures to Magento upgrade version 2.3.6 to 2.4.5
+  a. php bin/magento maintenance:enable
+  b. cp composer.json composer.json.bak
+  c. composer require magento/composer-root-update-plugin=~1.0 --no-update
+  Current versions (for Magento 2.3.6 version setups)
+    i. PHP 7.3.3
+    ii. composer 1.10.6
+    iii. MySQL 5.6
+  d. composer update
+  e. composer require magento/product-community-edition=2.4.5 --no-update
+    Current versions (for Magento 2.4.5 version setups)
+      i. PHP 8.1.9
+      ii. composer 2.2.18
+      iii. MySQL 8.0.31
+      composer update (Extract the files on the Magento root directory)
+      i. php bin/magento cache:clean
+      ii. rm -rf var/cache/*
+      iii. rm -rf var/page_cache/*
+      iv. rm -rf generated/code/*
+      v. php bin/magento setup:upgrade
+      vi. Config the elasticsearch 
+      vii. SELECT * FROM `avatax_sales_order` WHERE 1
+      viii. DELETE FROM `avatax_sales_order` WHERE `avatax_sales_order`.`id` = 666 (Enter the duplicate item id and delete it.)
+      ix. bin/magento mo:d Magento_TwoFactorAuth KiwiCommerce_AdminActivity Bss_SocialLogin
+      x. php bin/magento setup:di:compile
+      xi. php bin/magento setup:static-content:deploy -f
+  g.php bin/magento maintenance:disable
+3. bin/magento config:set system/security/max_session_size_admin 2560000
+4. composer require laminas/laminas-crypt
+5. composer require phpseclib/phpseclib
+6. bin/magento s:up && bin/magento s:d:c && bin/magento s:s:d -f && bin/magento c:c && bin/magento c:f
+7. bin/magento indexer:reindex 
+
