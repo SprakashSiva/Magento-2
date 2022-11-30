@@ -28,3 +28,44 @@ composer global config --list
 
 How to downgrade Magento 2.3.3 to Magento 2.3.1 or 2.3.2
 https://magento.stackexchange.com/a/294387
+
+PHP mail() how to set sender mail
+https://stackoverflow.com/a/17890382
+
+Error:
+	I have created my reason module on the spiritual360 project in the sales menu but the returns/refunds cant access another admin user like the marketing team user so I will try to fix this issue over the day
+Solution:
+	first, create an acl.xml file and create a menu.xml file with a defined resource id with the same in both(don't forget)
+Reference:	
+  https://magento.stackexchange.com/questions/142274/user-with-custom-role-cannot-access-custom-menu-item-in-magento-2-admin-interfac
+ 
+Error:
+  The solution to No such file or directory in composer autoload_real.php in Magento 2 or I have removed the custom extension using the composer remove but I can't run the Magento command or the website not working
+
+Solution:
+  Run the below command
+    composer dump-autoload
+
+Install a specific version of the package using Composer
+  composer require vendor/package:version
+Reference:
+  https://stackoverflow.com/questions/40914114/how-to-install-a-specific-version-of-package-using-composer/41703068#41703068
+ 
+Enable terms and conditions in the frontend checkout page before selecting the payment method
+  https://docs.magento.com/user-guide/sales/terms-and-conditions.html
+
+Bug:
+  Admin order not updated 
+Soultion:
+  Admin -> Store -> Configuration -> Advanced -> Developer -> Grid Settings -> Disable Asynchronous indexing 
+ 
+Magento2 add the cart scroll top function ( in Magento default is not working)
+	https://itectec.com/magento/magento-scroll-to-top-after-adding-product-to-cart/
+Magento disable the multiple modules command
+	bin/magento module:disable Synamen_DeliveryDate Synamen_EasyFilter Synamen_Emi Synamen_Mobile 
+
+Find out, which technologies such as CMS, programming language, web server, and hosting provider a particular website is using. 
+	https://w3techs.com/sites/info
+1. Magento root directory name same has core config data table base URL (don't forget)
+2. if creating a virtual product then you can't ship only an invoice
+3.1if you did not enter the weight of the product then the product type has been created on the virtual type
