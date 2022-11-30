@@ -23,4 +23,7 @@ Configure Tax class
 2. Go to Admin -> Stores -> Taxes  -> Tax rules -> Add new tax
 
 
+Where is the composer's global auth.json located?
+composer global config --list
+
 
