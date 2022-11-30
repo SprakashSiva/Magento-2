@@ -156,3 +156,13 @@ Available commands:
   yotpo:reset                                          Reset Yotpo sync flags &/or configurations
   yotpo:sync                                           Sync Yotpo manually (reviews module)
   yotpo:update-metadata                                Manually send platform metadata to Yotpo
+
+
+bin/magento module:disable Magento_TwoFactorAuth
+
+bin/magento s:up && bin/magento s:d:c && bin/magento s:s:d -f && bin/magento c:C && bin/magento c:f
+
+Disables elastic search module comment (don't forget)
+php bin/magento module:disable {Magento_Elasticsearch,Magento_InventoryElasticsearch,Magento_Elasticsearch6,Magento_Elasticsearch7}
+
+php bin/magento queue:consumers:start exportProcessor
