@@ -1,0 +1,11 @@
+In XL spreadsheet
+1. if you remove unwanted columns (ctl+shft+left arow)
+2. in filter a particular column then click the filter icon on the top and find the value a like reason attribute, unselect all values and select the only reason attribute then save the file
+
+=VLOOKUP(M2,$dist.$E$2:$dist.$E$3491,1,0) 
+=vlookup -- function
+N2 -- subscipotion id column form 
+$dist -- distibution report data
+$F$2 -- subscription id column from value
+$f3491 -- subscritption id column to value
+1,0 -- default
